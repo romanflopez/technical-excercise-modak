@@ -1,0 +1,34 @@
+<div class="card text-center">
+  <div>
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input
+        class="p-2 border-round-lg"
+        pInputText
+        type="text"
+        [formControl]="searchInput"
+      />
+    </span>
+  </div>
+</div>
+
+<ng-container *ngIf="artworks$ | async as artworks">
+  <ng-container *ngIf="artworks?.data?.length; else emptyRecords">
+    <div class="p-flex-wrap p-jc-start p-ai-start container artworks-container">
+      <ng-container *ngFor="let aw of artworks.data">
+        <app-artwork [artwork]="aw"></app-artwork>
+      </ng-container>
+    </div>
+  </ng-container>
+  <p-paginator
+    *ngIf="artworks.pagination.total"
+    (onPageChange)="onPageChange($event)"
+    [first]="artworks.pagination.current_page"
+    [rows]="artworks.pagination.limit"
+    [totalRecords]="artworks.pagination.total"
+    [rowsPerPageOptions]="[pageSize.TWELVE, pageSize.TWENTY, pageSize.THIRTY]"
+  ></p-paginator>
+  <ng-template #emptyRecords>
+    <div class="col-12 empty-records mt-3">no results</div>
+  </ng-template>
+</ng-container>

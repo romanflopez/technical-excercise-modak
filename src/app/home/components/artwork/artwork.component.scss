@@ -1,0 +1,24 @@
+:host ::ng-deep {
+  p-card {
+    .p-card .p-card-title {
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 3 !important;
+      -webkit-box-orient: vertical !important;
+    }
+    .p-card-header {
+      height: 180px;
+    }
+    .p-card-header img {
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+    .p-card-body {
+      min-height: 310px;
+    }
+  }
+}
+.card-container {
+  min-height: 600px;
+}

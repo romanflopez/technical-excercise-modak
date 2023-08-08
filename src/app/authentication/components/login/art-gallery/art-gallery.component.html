@@ -1,0 +1,17 @@
+<ng-container *ngIf="artworks?.length">
+  <div class="gallery-container">
+    <p-galleria
+      [responsiveOptions]="responsiveOptions"
+      [containerStyle]="{ 'max-width': '640px' }"
+      [showIndicators]="false"
+      [value]="artworks"
+      [autoPlay]="true"
+      [circular]="true"
+      [showThumbnails]="false"
+    >
+      <ng-template pTemplate="item" let-item>
+        <img artSrc [src]="item.image_id" [alt]="item.title" />
+      </ng-template>
+    </p-galleria>
+  </div>
+</ng-container>

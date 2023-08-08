@@ -1,0 +1,25 @@
+<div class="px-4 py-2 mb-4 shadow-box" *ngIf="isLoggedIn$ | async">
+  <ng-container *ngIf="username$ | async as user">
+    <div class="flex align-items-center justify-content-between">
+      <div class="flex">
+        <div class="pi pi-user"></div>
+        <div class="pl-3">{{ user }}</div>
+      </div>
+      <div class="flex gap-2">
+        <a routerLink="table">
+          <p-button styleClass="p-button-outlined" label="Table"></p-button>
+        </a>
+        <p-button
+          styleClass="p-button-outlined"
+          routerLink="home"
+          label="Home"
+        ></p-button>
+        <p-button
+          styleClass="p-button-outlined"
+          (click)="logOut()"
+          label="Logout"
+        ></p-button>
+      </div>
+    </div>
+  </ng-container>
+</div>

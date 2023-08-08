@@ -1,0 +1,15 @@
+<div class="card-container col-12">
+  <p-card
+    class="col-3"
+    [header]="artwork.title"
+    [subheader]="artwork.artist_title"
+    [style]="{ width: '360px' }"
+  >
+    <ng-template pTemplate="header">
+      <img artSrc [src]="artwork.image_id" [alt]="artwork.title" />
+    </ng-template>
+    <p class="text-truncate">
+      {{ artwork?.exhibition_history ? artwork.exhibition_history : "-" }}
+    </p>
+  </p-card>
+</div>

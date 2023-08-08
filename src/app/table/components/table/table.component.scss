@@ -1,0 +1,6 @@
+.responsive-table {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-x: auto; /* Agrega un desplazamiento horizontal si la tabla es demasiado ancha */
+}
