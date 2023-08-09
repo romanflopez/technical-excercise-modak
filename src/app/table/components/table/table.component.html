@@ -16,7 +16,7 @@
             onerror="this.src='https://placehold.co/100x25';"
             [src]="item.thumbnail?.lqip"
             [alt]="item.thumbnail?.alt_text"
-            width="100"
+            width="100%"
             class="shadow-4"
           />
         </td>
@@ -24,7 +24,7 @@
     </ng-template>
     <ng-template pTemplate="summary">
       <div class="flex align-items-center justify-content-between">
-        In total there are {{ tableData ? tableData.length : 0 }} products.
+        In total there are {{ tableData ? tableData.length : 0 }} artworks
       </div>
     </ng-template>
   </p-table>

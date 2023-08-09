@@ -23,5 +23,5 @@ modak technical excercise using Art Institute of Chicago API
 
 ## Other
 
-issuebecause you have to install the dependencies with a -f
+issue because you have to install the dependencies with a -f
 https://github.com/primefaces/primeng/issues/13197
