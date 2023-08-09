@@ -20,3 +20,8 @@ modak technical excercise using Art Institute of Chicago API
 
 4. In another terminal, start the Angular application:
    ng serve
+
+## Other
+
+issuebecause you have to install the dependencies with a -f
+https://github.com/primefaces/primeng/issues/13197
